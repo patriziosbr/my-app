@@ -1,14 +1,23 @@
-import React from 'react';
+// import React from 'react';
 import './seriesList.css'
+import {Link} from "react-router-dom";
+
+
 
 const SeriesListItem = ({series})=> (
-    <li > 
-        {series.show.name}
+    <li> 
+        <Link 
+        to={{
+            pathname: `serie/${series.show.id}`,
+            state: series
+        }}>
+           {series.show.name}
+        </Link>
     </li>
 )
 
 const SeriesList = (props) => {
-    // console.log(props.list);
+    console.log(props.list);
     return(
         <div>
             <ul className="series-list">
@@ -18,7 +27,6 @@ const SeriesList = (props) => {
             </ul>
         </div>
     )
-
 }
 
 export default SeriesList;

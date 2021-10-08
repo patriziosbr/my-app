@@ -1,9 +1,12 @@
 
+
 const Intro = (props) => {
     return ( 
-        <p>
-            {props.message}
-        </p>
+        <div>
+            <p>
+                {props.message}
+            </p>
+        </div>
     )
 }
 
